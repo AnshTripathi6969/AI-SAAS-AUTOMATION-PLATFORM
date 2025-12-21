@@ -1,15 +1,30 @@
 import { RegisterForm } from "@/features/auth/components/register_form";
 import { requireUnauth } from "@/lib/auth-utils";
+import Image from "next/image";
 
-const Page = async () => {
+export default async function Page() {
+  await requireUnauth();
 
-    await requireUnauth();
-
-    return(
-        <div>
-            <RegisterForm/>
+  return (
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* LOGO — ALIGNED TO FORM */}
+      <div className="pointer-events-none absolute top-13 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4">
+        <div className="flex items-center justify-center gap-2 text-white">
+          <Image
+            src="/logos/logo2.svg"
+            alt="Fluxion AI logo"
+            width={36}
+            height={36}
+            priority
+          />
+          <span className="text-lg font-semibold tracking-wide">
+            Fluxion AI Automation Core
+          </span>
         </div>
-    );
-};
+      </div>
 
-export default Page;
+      {/* FULLSCREEN REGISTER */}
+      <RegisterForm />
+    </div>
+  );
+}
