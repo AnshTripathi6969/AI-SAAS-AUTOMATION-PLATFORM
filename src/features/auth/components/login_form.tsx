@@ -89,7 +89,7 @@ export function LoginForm() {
           <motion.div
             key={i}
             className="absolute h-[2px] w-[140px] rounded-full
-              bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"
+              bg-linear-to-r from-transparent via-purple-400/60 to-transparent"
             style={{
               top: `${35 + i * 4}%`,
               left: "30%",
@@ -111,7 +111,7 @@ export function LoginForm() {
           <motion.div
             key={`blue-${i}`}
             className="absolute h-[2px] w-[120px] rounded-full
-              bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"
+              bg-linear-to-r from-transparent via-blue-400/50 to-transparent"
             style={{
               top: `${40 + i * 5}%`,
               left: "28%",
@@ -232,7 +232,7 @@ export function LoginForm() {
                     <Button
                       type="submit"
                       disabled={isPending}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600"
+                      className="w-full bg-linear-to-r from-purple-600 to-blue-600"
                     >
                       {isPending ? "Signing in..." : "Sign in"}
                     </Button>
