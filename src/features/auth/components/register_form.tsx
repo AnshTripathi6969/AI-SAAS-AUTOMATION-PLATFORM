@@ -79,7 +79,7 @@ export function RegisterForm() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-black overflow-hidden px-4">
+    <div className="relative z-20 flex min-h-screen items-center justify-center overflow-hidden px-4">
       {/* BACKGROUND GLOW */}
       <motion.div className="absolute inset-0 pointer-events-none">
         <motion.div
